@@ -1,7 +1,7 @@
 var prompt = require('prompt-sync')();
 const os = require("os")
 const interfaces = os.networkInterfaces()
-
+const path=require("path")
 
 
 //server ipv4 details fetching
@@ -32,7 +32,7 @@ function defaultInput() {
     var ip = serverip[0];
     var user = "username"
     var pass = "password"
-    var pathh = __dirname
+    var pathh = path.join(__dirname,"..")
     module.exports = { ip, user, pass, pathh }
 }
 module.exports = { takeInput, defaultInput }

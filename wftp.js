@@ -43,8 +43,8 @@ function startWebServer() {
                             </form>`
             for (i = 0; i < fileList.length; i++) {
 
-
-                if (fs.lstatSync(fileList[i]).isFile()) {
+               
+                if (fs.lstatSync(pathh+"/"+fileList[i]).isFile()) {
                     htmlcontent += `<h3><img src="/assets/file.svg" width="30px"; height="30px";><a href="/public/${fileList[i]}">${fileList[i]}</a></h3>`
 
                 } else {
