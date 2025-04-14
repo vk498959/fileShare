@@ -16,7 +16,11 @@ function startFTPServer() {
     });
 
     ftpServer.listen().then(() => {
-        console.log('You can access the file via ftp://' + ip + ':' + port + '& username = ' + user + '& password' + pass)
+        console.log(`
+            You can access the file via ftp://${ip}:${port} 
+            username = ${user}
+            password= ${pass}        
+            `)
     });
 }
 
