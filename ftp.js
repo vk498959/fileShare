@@ -1,8 +1,7 @@
-const { ip, user, pass, pathh } = require("./input")
-const FtpSrv = require('ftp-srv');
+import { FtpSrv } from 'ftp-srv';
 const port = 2221;
 
-function startFTPServer() {
+export default function startFTPServer(ip,user,pass,pathh) {
     const ftpServer = new FtpSrv({
         url: "ftp://" + ip + ":" + port,
         anonymous: false
@@ -24,4 +23,3 @@ function startFTPServer() {
     });
 }
 
-module.exports = { startFTPServer }
